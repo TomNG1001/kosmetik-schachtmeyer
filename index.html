@@ -9,11 +9,14 @@
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Kosmetikinstitut Christa von Schachtmeyer · Schriesheim">
 <meta property="og:description" content="Fachkosmetik und persönliche Beratung in Schriesheim. Ein Ambiente zum Abschalten und Wohlfühlen.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="images/hero-1920.jpg">
 <meta property="og:locale" content="de_DE">
 <script>var _q=location.search;if(_q.indexOf('shot')>-1)document.documentElement.classList.add('shot');if(_q.indexOf('hover')>-1)document.documentElement.classList.add('hovertest');</script>
 <link rel="stylesheet" href="styles.css">
-<link rel="preload" href="images/hero.jpg" as="image" fetchpriority="high">
+<link rel="preload" as="image" fetchpriority="high"
+      href="images/hero-1280.webp"
+      imagesrcset="images/hero-768.webp 768w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w"
+      imagesizes="100vw">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4ECE0'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%237A1E2B' text-anchor='middle'%3ECS%3C/text%3E%3C/svg%3E">
 
 <script type="application/ld+json">
@@ -22,7 +25,7 @@
   "@type":"BeautySalon",
   "name":"Kosmetikinstitut Christa von Schachtmeyer",
   "description":"Fachkosmetik und persönliche Beratung in Schriesheim.",
-  "image":"images/hero.jpg",
+  "image":"images/hero-1920.jpg",
   "telephone":"+49 6203 660611",
   "email":"info@kosmetik-schriesheim.de",
   "priceRange":"€€",
@@ -38,8 +41,8 @@
 
 <!-- ============================ Navigation ============================ -->
 <header class="nav" id="nav">
-  <a class="logo" href="#top" aria-label="Kosmetikinstitut Christa von Schachtmeyer, zur Startseite">
-    <span class="logo-mark">CS</span>
+  <a class="logo" href="#top" title="Zur Startseite">
+    <span class="logo-mark" aria-hidden="true">CS</span>
     <span class="logo-word">
       <span class="logo-name">von Schachtmeyer</span>
       <span class="logo-sub">Kosmetikinstitut · Parfümerie</span>
@@ -65,7 +68,13 @@
   <!-- ============================ Hero ============================ -->
   <section class="hero">
     <div class="hero-media" aria-hidden="true">
-      <img src="images/hero.jpg" alt="" width="2048" height="1152">
+      <picture>
+        <source type="image/webp" sizes="100vw"
+                srcset="images/hero-768.webp 768w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w">
+        <img src="images/hero-1280.jpg" sizes="100vw"
+             srcset="images/hero-768.jpg 768w, images/hero-1280.jpg 1280w, images/hero-1920.jpg 1920w"
+             alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -92,7 +101,13 @@
         </div>
         <div class="welcome-visual reveal d1">
           <div class="img-frame reveal-img">
-            <img src="images/ambiente.jpg" alt="Behandlungsraum im Kosmetikinstitut Christa von Schachtmeyer" width="1920" height="1072">
+            <picture>
+              <source type="image/webp" sizes="(max-width:1100px) 92vw, 46vw"
+                      srcset="images/ambiente-560.webp 560w, images/ambiente-720.webp 720w, images/ambiente-900.webp 900w, images/ambiente-1400.webp 1400w">
+              <img src="images/ambiente-900.jpg" sizes="(max-width:1100px) 92vw, 46vw"
+                   srcset="images/ambiente-560.jpg 560w, images/ambiente-720.jpg 720w, images/ambiente-900.jpg 900w, images/ambiente-1400.jpg 1400w"
+                   alt="Behandlungsraum im Kosmetikinstitut Christa von Schachtmeyer" width="1400" height="782" decoding="async">
+            </picture>
           </div>
         </div>
         <div class="promises reveal d2">
@@ -128,7 +143,13 @@
       <div class="methode-grid">
         <div class="methode-visual reveal">
           <div class="reveal-img">
-            <img src="images/methode.jpg" alt="Kosmetikerin führt eine sanfte Gesichtsmassage durch" width="1920" height="1280">
+            <picture>
+              <source type="image/webp" sizes="(max-width:900px) 92vw, 40vw"
+                      srcset="images/methode-480.webp 480w, images/methode-760.webp 760w, images/methode-1200.webp 1200w">
+              <img src="images/methode-760.jpg" sizes="(max-width:900px) 92vw, 40vw"
+                   srcset="images/methode-480.jpg 480w, images/methode-760.jpg 760w, images/methode-1200.jpg 1200w"
+                   alt="Kosmetikerin führt eine sanfte Gesichtsmassage durch" width="1200" height="800" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
         <div class="methode-copy reveal d1">
@@ -160,7 +181,7 @@
         <!-- Clarins Gesicht -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/gesicht.jpg" alt="Strahlende Haut nach einer Clarins Gesichtsbehandlung" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/gesicht.webp"><img src="images/gesicht.jpg" alt="Strahlende Haut nach einer Clarins Gesichtsbehandlung" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Clarins Gesichtsbehandlungen</span>
               <span class="acc-desc">Für sichtbar gepflegte und entspannte Haut</span>
@@ -202,7 +223,7 @@
         <!-- Augenbrauen -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/augenbrauen.jpg" alt="Perfekt in Form gebrachte Augenbraue" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/augenbrauen.webp"><img src="images/augenbrauen.jpg" alt="Perfekt in Form gebrachte Augenbraue" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Augenbrauen</span>
               <span class="acc-desc">In Form bringen, neu gestalten, färben</span>
@@ -228,7 +249,7 @@
         <!-- Wimpern -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/wimpern.jpg" alt="Auge mit langen, definierten Wimpern" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/wimpern.webp"><img src="images/wimpern.jpg" alt="Auge mit langen, definierten Wimpern" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Wimpern</span>
               <span class="acc-desc">Definierter Blick durch Wimpernfärben</span>
@@ -246,7 +267,7 @@
         <!-- Haarentfernung -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/haarentfernung.jpg" alt="Glatte, gepflegte Haut nach Haarentfernung mit Wachs" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/haarentfernung.webp"><img src="images/haarentfernung.jpg" alt="Glatte, gepflegte Haut nach Haarentfernung mit Wachs" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Haarentfernung mit Wachs</span>
               <span class="acc-desc">Sanft und gründlich, für streichelzarte Haut</span>
@@ -276,7 +297,7 @@
         <!-- Füße -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/fuesse.jpg" alt="Gepflegte Füße nach einer Pediküre" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/fuesse.webp"><img src="images/fuesse.jpg" alt="Gepflegte Füße nach einer Pediküre" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Füße</span>
               <span class="acc-desc">Pediküre und Lack für gepflegte Füße</span>
@@ -298,7 +319,7 @@
         <!-- Hände -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/haende.jpg" alt="Gepflegte Hände nach einer Maniküre" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/haende.webp"><img src="images/haende.jpg" alt="Gepflegte Hände nach einer Maniküre" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Hände</span>
               <span class="acc-desc">Maniküre und Lack für schöne Hände</span>
@@ -320,7 +341,7 @@
         <!-- Make up -->
         <div class="acc-item">
           <button class="acc-head" aria-expanded="false">
-            <span class="acc-thumb"><img src="images/makeup.jpg" alt="Elegant geschminktes Gesicht" width="600" height="450" loading="lazy"></span>
+            <span class="acc-thumb"><picture><source type="image/webp" srcset="images/makeup.webp"><img src="images/makeup.jpg" alt="Elegant geschminktes Gesicht" width="160" height="120" loading="lazy" decoding="async"></picture></span>
             <span class="acc-titles">
               <span class="acc-cat">Makeup</span>
               <span class="acc-desc">Vom Tageslook bis zum Braut Makeup</span>
@@ -369,7 +390,11 @@
           <p>Ob Gesichtsbehandlung, Fußpflege oder Makeup zu Ihrem großen Tag: Jede Behandlung beginnt mit Zuhören. So entsteht eine Pflege, die genau zu Ihnen passt, in einem Ambiente, in dem Sie einfach nur ankommen dürfen.</p>
           <div class="christa-portrait">
             <div class="christa-portrait-img">
-              <img src="images/christa.jpg" alt="Christa von Schachtmeyer in ihrem Kosmetikinstitut" width="1600" height="893" loading="lazy">
+              <picture>
+                <source type="image/webp" sizes="240px" srcset="images/christa-280.webp 280w, images/christa-480.webp 480w">
+                <img src="images/christa-480.jpg" sizes="240px" srcset="images/christa-280.jpg 280w, images/christa-480.jpg 480w"
+                     alt="Christa von Schachtmeyer in ihrem Kosmetikinstitut" width="480" height="480" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="christa-portrait-text">
               <span class="christa-sign">Christa von Schachtmeyer</span>

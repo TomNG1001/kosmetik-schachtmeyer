@@ -1,0 +1,7 @@
+.vercel
+node_modules/
+package-lock.json
+
+# Bildquellen (Originale) bleiben lokal, ausgeliefert werden nur die
+# generierten Varianten in images/. Neu erzeugen: node build-images.js
+images/src/
