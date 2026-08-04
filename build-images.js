@@ -14,12 +14,18 @@ const OUT = path.join(__dirname, 'images');
 // Quadratischer Portraitausschnitt (Anteile der Originalmasse),
 // damit das runde Bild ohne CSS-Zoom auskommt.
 const CROP = {
-  christa: { left: 0.315, top: 0, size: 0.25 },
+  christa: { left: 0.171, top: 0.073, size: 0.429 },
+};
+
+// Abweichende Qualitaet fuer einzelne Bilder (Standard: jpg 78 / webp 74).
+// Das Raumfoto ist grossflaechig hell und vertraegt staerkere Kompression.
+const QUALITY = {
+  ambiente: { jpeg: 72, webp: 66 },
 };
 
 const PLAN = {
   hero:           [768, 1280, 1920],
-  ambiente:       [560, 720, 900, 1400],
+  ambiente:       [480, 700, 900, 1200],
   methode:        [480, 760, 1200],
   christa:        [280, 480],
   gesicht:        [160],
@@ -51,11 +57,12 @@ async function build() {
 
     for (const w of widths) {
       const suffix = widths.length > 1 ? '-' + w : '';
+      const q = QUALITY[name] || { jpeg: 78, webp: 74 };
       await base().resize({ width: w, withoutEnlargement: true })
-        .jpeg({ quality: 78, mozjpeg: true, progressive: true })
+        .jpeg({ quality: q.jpeg, mozjpeg: true, progressive: true })
         .toFile(path.join(OUT, `${name}${suffix}.jpg`));
       await base().resize({ width: w, withoutEnlargement: true })
-        .webp({ quality: 74 })
+        .webp({ quality: q.webp })
         .toFile(path.join(OUT, `${name}${suffix}.webp`));
       const jpgKb = Math.round(fs.statSync(path.join(OUT, `${name}${suffix}.jpg`)).size / 1024);
       const webpKb = Math.round(fs.statSync(path.join(OUT, `${name}${suffix}.webp`)).size / 1024);
